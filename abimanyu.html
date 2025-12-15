@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Afdan | EL FAMILIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animasi */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(204, 0, 0, 0.9); }
+      100% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: #c00;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: all 0.3s;
+    }
+    .back-btn:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Header Baru */
+    .detail-header {
+      background: linear-gradient(135deg, #000, #1a0000);
+      padding: 20px 0;
+      border-bottom: 2px solid #c00;
+      position: relative;
+    }
+
+    .detail-header .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 2px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+      box-shadow: 0 0 15px rgba(204, 0, 0, 0.3);
+    }
+
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #c00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: white;
+      border: 2px solid #fff;
+    }
+
+    .profile-info h2 {
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-info .role {
+      color: #c00;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      border: 1px solid #444;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      border-color: #c00;
+      box-shadow: 0 8px 20px rgba(204, 0, 0, 0.3);
+      animation: glow 1.5s infinite;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #c00;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .hero-name {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .items-grid {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .item-card {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      transition: all 0.3s;
+    }
+    .item-card:hover {
+      border-color: #c00;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+    }
+
+    .item-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .item-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .role-section {
+      margin-bottom: 40px;
+      padding: 24px;
+      background: rgba(20, 20, 20, 0.8);
+      border-radius: 12px;
+      border-left: 4px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .role-section h3 {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0a0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="detail-header">
+    <div class="container">
+      <a href="ml.html" class="back-btn">← Back to Team</a>
+      <div class="logo-container">
+        <svg class="logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="#c00" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Orbitron">EF</text>
+        </svg>
+        <h1>EL FAMILIA</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="profile-card">
+    <div class="profile-photo">
+      <img src="assets 2/bim.jpg" alt="Bim" class="profile-img-detail" />
+    </div>
+    <div class="profile-info">
+      <h2>Abimanyu</h2>
+      <p class="role">Jungler</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="detail-page">
+    <div class="container">
+
+      <!-- Role Section -->
+      <div class="role-section">
+        <h3>Role Overview: Jungler</h3>
+        <p>
+        Jungler adalah core lane di tim karena dia dapat membuat kita menang jika dia bisa ungguk dari jungler lawan dan jungler merupkan lane dengan damage kosistent, apa maksudnya? rata rata hero damage jungler dari awal sampai late game memang benar benar bisa membunuh lawan dengan mudah
+        </p>
+        <p>
+          Keunggulannya Abimanyu atau biasa di panggil bim bim ini dia bisa memainkan hero yang lincah dan juga jika diperlukan dia juga bisa bermain jung tank dia merupakan jungler flexibilitas yang kami punya di tim
+        </p>
+      </div>
+
+      <!-- Hero 1 -->
+      <div class="hero-card">
+        <img src="assets 2/gus.jpg" alt="Gusion" class="hero-img" />
+        <h4 class="hero-name">Gusion</h4>
+        <p class="hero-desc">
+          Gusion dia merupakan salah satu hero tertua di mobile legend dia menjadi salah satu favorit pro player esport indonesia ya itu emperor, Gusion ia dapat mengincar musuh dengan mudah tetapi memainkan karakter ini cukup susah di banding hero jungler lainnya</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/holy.jpg" alt="holy crystal">
+            <p>holy crystal</p>
+        <p><em>yep seperti item core harith item bertujuan untuk menambah daamge magic gusion sebesar besar nya dengan item ini bisa membuat musush sekali combo langsung mati.</em></p>
+      </div>
+
+      <!-- Hero 2 -->
+      <div class="hero-card">
+        <img src="assets 2/lance.jpg" alt="lance" class="hero-img" />
+        <h4 class="hero-name">lance</h4>
+        <p class="hero-desc">
+          Lancelot siapa yang tidak kenal dengan hero jungler ini? dia merupakan salah satu favorit para pemain jungler karena terkesan keren dan ganteng saya tidak menyalahkan entah kenapa jika bermain hero ini saya merasak keren, lancelot ini merupakan hero hard juga bagi pemain jungler karena salah saja penempatan skill maka kamu akan mati.ia juga bisa mengicnar hero bacliner dengan mudah di in game nya</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/axe.jpg" alt="War axe">
+            <p>War axe</p>
+        <p><em>Item ini memungkinkan lancelot bisa sustain di dalam war dan bahkan bisa membuat lancelot mendapat kan lifesteel dari item ini tidak heran ini yang membuat dia sustain di war</em></p>
+      </div>
+
+      <!-- Hero 3 -->
+      <div class="hero-card">
+        <img src="assets 2/sy.jpg" alt="Suyou" class="hero-img" />
+        <h4 class="hero-name">Suyou</h4>
+        <p class="hero-desc">
+         suyou hero ini masih di bilang terbilang masi muda di mobile legend tapi saat perilisan hero ini benar benar banyak langsung memakai nya karena hero in sangat cocok dengan kalian jika kalian ingin hero dengan damage yang besar tapi ingin juga dengan hero yang bisa melakukan war tarik ulur</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/hepta.jpg" alt="heptaseas">
+            <p>heptaseas</p>
+          Ini item core dari suyou sangat cocok dengan suyou kenapa damge yang di berikan oleh suyou itu termasuk busrt dan buka seprti hero lain yang melakukan damge secara poke item ini juga memiliki movement tambahan jika sudah dipakai.</em></p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EL FAMILIA Esports. Built with ❤️ by Afdan Arrasyd.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animasi scroll reveal (opsional)
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll('.hero-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 + index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

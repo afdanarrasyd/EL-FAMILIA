@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Afdan | EL FAMILIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animasi */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(204, 0, 0, 0.9); }
+      100% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: #c00;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: all 0.3s;
+    }
+    .back-btn:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Header Baru */
+    .detail-header {
+      background: linear-gradient(135deg, #000, #1a0000);
+      padding: 20px 0;
+      border-bottom: 2px solid #c00;
+      position: relative;
+    }
+
+    .detail-header .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 2px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+      box-shadow: 0 0 15px rgba(204, 0, 0, 0.3);
+    }
+
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #c00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: white;
+      border: 2px solid #fff;
+    }
+
+    .profile-info h2 {
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-info .role {
+      color: #c00;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      border: 1px solid #444;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      border-color: #c00;
+      box-shadow: 0 8px 20px rgba(204, 0, 0, 0.3);
+      animation: glow 1.5s infinite;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #c00;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .hero-name {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .items-grid {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .item-card {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      transition: all 0.3s;
+    }
+    .item-card:hover {
+      border-color: #c00;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+    }
+
+    .item-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .item-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .role-section {
+      margin-bottom: 40px;
+      padding: 24px;
+      background: rgba(20, 20, 20, 0.8);
+      border-radius: 12px;
+      border-left: 4px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .role-section h3 {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0a0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="detail-header">
+    <div class="container">
+      <a href="ml.html" class="back-btn">← Back to Team</a>
+      <div class="logo-container">
+        <svg class="logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="#c00" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Orbitron">EF</text>
+        </svg>
+        <h1>EL FAMILIA</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="profile-card">
+    <div class="profile-photo">
+      <img src="assets 2/genteng.jpg.jpg" alt="Afdan" class="profile-img-detail" />
+    </div>
+    <div class="profile-info">
+      <h2>Afdan</h2>
+      <p class="role">Exp Laner</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="detail-page">
+    <div class="container">
+
+      <!-- Role Section -->
+      <div class="role-section">
+        <h3>Role Overview: Exp Laner</h3>
+        <p>
+          Explaner merupkan salah satu lane penting dalam melakukan war explaner bertugas sebagai penyerang damage lawan dari belakang seperti mm dan mage exp juga bisa menggantikan posisi roam atau tank sebagai menahan damage agar rekan satu tim tidak meneriman damage
+        </p>
+        <p>
+          Keunggulannya terletak pada pemahaman timing, manajemen minion wave, dan kemampuan membaca gerakan lawan. Ia tidak hanya fokus pada kill, tetapi pada efisiensi ekonomi dan map control—faktor kunci dalam memenangkan pertandingan level tinggi. Afdan sering menjadi “anchor” saat tim butuh waktu untuk farm atau reset, dan ia mampu mengubah momentum pertandingan dengan satu gank yang tepat.
+        </p>
+      </div>
+
+      <!-- Hero 1 -->
+      <div class="hero-card">
+        <img src="assets 2/lupa.jpg" alt="Lapu-Lapu" class="hero-img" />
+        <h4 class="hero-name">Lapu-Lapu</h4>
+        <p class="hero-desc">
+          Lapu-Lapu merupakan salah satu main karakter saya karena ia memiliki durabilitas untuk mengincar lawan belakang dengan mudah ia juga merupakan hero pertama saya dalam bermain explaner</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/axe.jpg" alt="War axe">
+            <p>War axe</p>
+        <p><em>Item core dari Lapu-Lapu adalah war exe mengapa? karena item ini bisa membuat lapu menjadi sustain dan bisa mendapatkan speelvamp yang begitu banyak .</em></p>
+      </div>
+
+      <!-- Hero 2 -->
+      <div class="hero-card">
+        <img src="assets 2/ungu.jpg" alt="phoveus" class="hero-img" />
+        <h4 class="hero-name">phoveus</h4>
+        <p class="hero-desc">
+          Hero ini saya sering saya mainkan ketika tim membutuh kan hero explaner yang tankie jika roam saya support saya akan menggunakan hero yang satu ini.
+        </p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/thun.jpg" alt="Thunderbelt">
+            <p>Thunderbelt</p>
+        <p><em>item core ini wajib kalian beli jika kalian bermain phoveus mengapa? karena stuck pasif dari item ini bisa membuat phoveus sangat susah di bunuh karena stuck dari item tidak ada batasnya.</em></p>
+      </div>
+
+      <!-- Hero 3 -->
+      <div class="hero-card">
+        <img src="assets 2/paqu.jpg" alt="Paquito" class="hero-img" />
+        <h4 class="hero-name">Paquito</h4>
+        <p class="hero-desc">
+         Hero ini saya biasa gunakan ketika kami bermain have fun saja entah kenapa sangat seru untk bermian hero ini karena hero ini memiliki damage yang sangat tinggi dan dapat menyulik lawan dengan begitu mudah</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/sky.jpg" alt="Skypiecer">
+            <p>Skypiecer</p>
+         <p><em>tentu saja menyulik lawan dengan begitu mudah dan instant.</em></p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EL FAMILIA Esports. Built with ❤️ by Afdan Arrasyd.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animasi scroll reveal (opsional)
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll('.hero-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 + index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Afdan | EL FAMILIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animasi */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(204, 0, 0, 0.9); }
+      100% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: #c00;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: all 0.3s;
+    }
+    .back-btn:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Header Baru */
+    .detail-header {
+      background: linear-gradient(135deg, #000, #1a0000);
+      padding: 20px 0;
+      border-bottom: 2px solid #c00;
+      position: relative;
+    }
+
+    .detail-header .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 2px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+      box-shadow: 0 0 15px rgba(204, 0, 0, 0.3);
+    }
+
+    .profile-info h2 {
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-info .role {
+      color: #c00;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      border: 1px solid #444;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      border-color: #c00;
+      box-shadow: 0 8px 20px rgba(204, 0, 0, 0.3);
+      animation: glow 1.5s infinite;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #c00;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .hero-name {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .items-grid {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .item-card {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      transition: all 0.3s;
+    }
+    .item-card:hover {
+      border-color: #c00;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+    }
+
+    .item-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .item-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .role-section {
+      margin-bottom: 40px;
+      padding: 24px;
+      background: rgba(20, 20, 20, 0.8);
+      border-radius: 12px;
+      border-left: 4px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .role-section h3 {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0a0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+
+    .member {
+  background: rgba(30, 30, 30, 0.85);
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  color: white;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.member-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 16px;
+    border: 2px solid #c00;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="detail-header">
+    <div class="container">
+      <a href="ml.html" class="back-btn">← Back to Team</a>
+      <div class="logo-container">
+        <svg class="logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="#c00" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Orbitron">EF</text>
+        </svg>
+        <h1>EL FAMILIA</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="profile-card">
+    <div class="profile-photo">
+        <div class="member-photo"><div class="member-placeholder">K</div></div>
+    </div>
+    <div class="profile-info">
+      <h2>Ken</h2>
+      <p class="role">Midlaner</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="detail-page">
+    <div class="container">
+
+      <!-- Role Section -->
+      <div class="role-section">
+        <h3>Role Overview: Midlaner</h3>
+        <p>
+       midlaner merupakan lane second damage yang sangat efisien untuk membantu damage tim damage dari midlaner ini juga cukup unik ya ada tipe burts dan tipe poke 
+        </p>
+        <p>
+         ken sangat mengerti bagaimana positioning dari mage ia juga bisa membantu memback up damage tim jika kurang di juga bisa melakukan laning phase dengan baik 
+        </p>
+      </div>
+
+      <!-- Hero 1 -->
+      <div class="hero-card">
+        <img src="assets 2/cil.jpg" alt="lylia" class="hero-img" />
+        <h4 class="hero-name">lylia</h4>
+        <p class="hero-desc">
+          meskipun hero jarang dilirik jangan salah hero cukup menyebalkan bagaiman tidak? hero yang memeiliki gerakan yang lincah seperti lance misalnya bisa di buat sangat selo karena skil skill nya yang spam saya lebih bertemu dengan hero mage lainnya dari pada hero mage ini apalagi dengan ultimate nya bisa mebalikkan waktu</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/glowing.jpg" alt="Glowing wand">
+            <p>Glowing wand</p>
+        <p><em>Ini item core lylia karena dia sudah memiliki pasif seperti dominan ice bisa membuat lifesteel atau speelvamp lawan berkurang dan item ini juga memiliki efek slow yang menjengkelkan</em></p>
+      </div>
+
+      <!-- Hero 2 -->
+      <div class="hero-card">
+        <img src="assets 2/pharsa.jpg" alt="Kalea" class="hero-img" />
+        <h4 class="hero-name">Pharsa</h4>
+        <p class="hero-desc">
+        belakangan ini hero ini sering sekali menjadi pick di tier atas bagaimana tidak hero ini memilki ultimate yang sakit bahkan saat kita sudah membeli armor dia masih saja memiliki skill yang begitu sakit
+        </p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/Trun.jpg" alt="Trunchen">
+            <p>Truncheon</p>
+        <p><em>item ini bisa membuat ultimate dari parsha sangat sakit entah kenapa armor seperti athena dan lainnya masih tembus saja ketika pharsa sudah membeli item tambahkan lagi ultimate dari pharsa ini adalah burst</em></p>
+      </div>
+
+      <!-- Hero 3 -->
+      <div class="hero-card">
+        <img src="assets 2/553baa93fa7c6de9dbb7e21f79c97b20.jpg" alt="xavier" class="hero-img" />
+        <h4 class="hero-name">Xavier</h4>
+        <p class="hero-desc">
+       hero ini menjadi hero yang sangat annoying kenpa? karena skil skil dia yang memiliki damage burst yang sakit dan combo yang mematikan karena walau gitu hero ini sangat situasional untuk di pick walaupun seperti itu hero ini tetap saja annoying</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/lentera.jpg" alt="Latern">
+            <p>Latern </p>
+          <p><em>item memiliki damage yang bertipe berskala jadi semakin besar damage yang di berikan semakin besar juga damagenya dan ini juga menjadi item paling menjengkelkan juga bayangkan saja jika xavier melakukan ultimmate item ini akan aktif pasif dan memberikan damage tambahan siapapun yang terkena ultimate xavier</em></p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EL FAMILIA Esports. Built with ❤️ by Afdan Arrasyd.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animasi scroll reveal (opsional)
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll('.hero-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 + index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Afdan | EL FAMILIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animasi */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(204, 0, 0, 0.9); }
+      100% { box-shadow: 0 0 5px rgba(204, 0, 0, 0.5); }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: #c00;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: all 0.3s;
+    }
+    .back-btn:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Header Baru */
+    .detail-header {
+      background: linear-gradient(135deg, #000, #1a0000);
+      padding: 20px 0;
+      border-bottom: 2px solid #c00;
+      position: relative;
+    }
+
+    .detail-header .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 2px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+      box-shadow: 0 0 15px rgba(204, 0, 0, 0.3);
+    }
+
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #c00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: white;
+      border: 2px solid #fff;
+    }
+
+    .profile-info h2 {
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-info .role {
+      color: #c00;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      border: 1px solid #444;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      border-color: #c00;
+      box-shadow: 0 8px 20px rgba(204, 0, 0, 0.3);
+      animation: glow 1.5s infinite;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #c00;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .hero-name {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .items-grid {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .item-card {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      transition: all 0.3s;
+    }
+    .item-card:hover {
+      border-color: #c00;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+    }
+
+    .item-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .item-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .role-section {
+      margin-bottom: 40px;
+      padding: 24px;
+      background: rgba(20, 20, 20, 0.8);
+      border-radius: 12px;
+      border-left: 4px solid #c00;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .role-section h3 {
+      color: #c00;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0a0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="detail-header">
+    <div class="container">
+      <a href="ml.html" class="back-btn">← Back to Team</a>
+      <div class="logo-container">
+        <svg class="logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="#c00" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Orbitron">EF</text>
+        </svg>
+        <h1>EL FAMILIA</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="profile-card">
+    <div class="profile-photo">
+      <img src="assets 2/jel.jpg" alt="Dafa" class="profile-img-detail" />
+    </div>
+    <div class="profile-info">
+      <h2>Zidane</h2>
+      <p class="role">Roaming</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="detail-page">
+    <div class="container">
+
+      <!-- Role Section -->
+      <div class="role-section">
+        <h3>Role Overview: Roaming</h3>
+        <p>
+        Yep kita ada di akhir role di mobile legend dan yang sangat sangat terpenting di dalam lane kita itu seakan akan hanya sebuah mainan yang di kendalikan oleh lane ini karen lane itu adalah lane ynag bisa mengatur pola permainan dalam tim dan juga mengatur bagaiman jalannya war dalam tim  
+        </p>
+        <p>
+          Keunggulannya Zidane ia mampu membaca gerakan musuh dan dapat membuat gerakan serta mampu membuat strategi yang sangat efektif untuk membalikkan keadaan dan ia juga peka terhadapa tim sekawannya untuk melakukan backup yang sangat cepat  
+        </p>
+      </div>
+
+      <!-- Hero 1 -->
+      <div class="hero-card">
+        <img src="assets 2/akai.jpg" alt="akai" class="hero-img" />
+        <h4 class="hero-name">Akai</h4>
+        <p class="hero-desc">
+          Siapa bilang hero ini sudah kuno? hero ini masih sering kami pakai apalagi ia sangat pro memakai tank ini tidak hanya memiliki damage yang cukup sakit tapi juga bisa membantalkan set up lawan dengan mudah terutama tigreal</p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/gojek.jpg" alt="Guardian helmet">
+            <p>Guardian helmet</p>
+        <p><em>ini menjadi item core dia dari tahun ke tahun yaa (sepertinya) item memiliki pasif unik yaitu bisa membuat hero yang memakai nya itu bertambah hpnya dari kurang sampai penuh kembali tapi ingat pasif ini digunakan ketika kamu tidak di serang oleh musuh item sangat cocok karena akai membutuh darah yang sangant banyak agar damage dia bisa sakit.</em></p>
+      </div>
+
+      <!-- Hero 2 -->
+      <div class="hero-card">
+        <img src="assets 2/ka.jpg" alt="Kalea" class="hero-img" />
+        <h4 class="hero-name">Kalea</h4>
+        <p class="hero-desc">
+         Kalea, yep dia menjadi salah satu one of most pink in mpl untuk category tank dan support bagaimana tidak? hero ini bisa menyulik hero belakang dengan mudah dan juga bisa memberikan pasif berupa darah dari hp yang hilang ke rekan tim disekitarnya ia bisa di bilang juga sangat sustain untuk sekelas hero support
+        </p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/thun.jpg" alt="Thunderbelt">
+            <p>Thunderbelt</p>
+        <p><em>Karena kale merupakan hero yang mengandalkan basic attack jadi kita harus memaksimalkan damage dari basic attack hero ini, kalea dengan mudah mencari stak dari item ini</em></p>
+      </div>
+
+      <!-- Hero 3 -->
+      <div class="hero-card">
+        <img src="assets 2/tg.jpg" alt="tigreal" class="hero-img" />
+        <h4 class="hero-name">Tigreal</h4>
+        <p class="hero-desc">
+        Hero yang di gadang gadang sebagai hero "epic dan hero bocil" tapi itu dulu sekarang dia salah satu most pick di ranked hero sangat cocock buat orang yang terpaksa menjadi roam karena hero menjadi hero yang sangat mudah di gunakan dan hero menjadi hero paling tua di mobile legend </p>
+        <h5>Core Items:</h5>
+        <div class="items-grid">
+          <div class="item-card">
+            <img src="assets 2/domi.jpg" alt="Dominan ice">
+            <p>Dominan ice </p>
+          <p><em>Item ini sangat tidak asing di kalangan orang orang yang bermain lane roam karena item ini memiliki serbaguna bisa menangkal hero dengan lifesteel atau speelvamp tinggi dan hero yang memiliki attack speed yang super timggi dengan item ini semua itu bisa di counter dengan hero ini.</em></p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EL FAMILIA Esports. Built with ❤️ by Afdan Arrasyd.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animasi scroll reveal (opsional)
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll('.hero-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 + index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>
